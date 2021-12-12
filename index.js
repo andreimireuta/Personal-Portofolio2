@@ -12,7 +12,13 @@ const progressBar = [99, 99, 90, 95, 80];
 window.addEventListener('scroll', () => {
     mainFn();
 });
+/*pentru a activa fiecare link din navbar cand suntem pe el am folosit pageYOffset
+    ne ia exact numaru de pixeli de la inceputul paginii pana in locul unde suntem noi cu scrollul
+    apoi comparam fiecare element cu numarul de pixeli scrolati si vedem unde suntem si adaugam apoi calsa change
 
+    pentru a face progress bar ul am folosit un vector cu dimensiuni  si am dat la fiecare element width ul corespunzator
+    
+*/ 
 const mainFn = () => {
     if (window.pageYOffset >= navbarOffsetTop)
         navbar.classList.add('sticky');
